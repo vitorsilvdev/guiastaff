@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diretrizes Internas | São Bernardo RP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070708;
+      --card-bg: #111112;
+      --primary-yellow: #ffcc00;
+      --primary-blue: #00e5ff;
+      --text-main: #e2e2e2;
+      --text-dim: #94a3b8;
+      --accent-glow: rgba(0, 229, 255, 0.2);
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      display: flex;
+    }
+
+    /* NAVIGATION PC */
+    nav {
+      width: 300px;
+      background-color: #000;
+      height: 100vh;
+      position: fixed;
+      padding: 40px 25px;
+      border-right: 1px solid #1e1e1e;
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    nav .logo-area {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    nav h1 {
+      font-size: 18px;
+      color: var(--primary-yellow);
+      letter-spacing: 3px;
+      margin: 0;
+    }
+
+    nav span {
+      font-size: 10px;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links { margin-top: 20px; }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      color: var(--text-dim);
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 14px 18px;
+      border-radius: 10px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      background: #161618;
+      color: #fff;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      margin-left: 300px;
+      padding: 60px;
+      width: 100%;
+    }
+
+    .content-wrapper { max-width: 900px; margin: 0 auto; }
+
+    section { 
+      margin-bottom: 100px; 
+      animation: slideUp 0.7s ease-out;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      background: var(--primary-blue);
+      color: #000;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 0;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: var(--primary-yellow);
+      margin-top: 10px;
+      border-radius: 2px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid #1e1e20;
+      border-radius: 16px;
+      padding: 30px;
+      margin-top: 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card.important { border-left: 5px solid var(--primary-yellow); }
+
+    h3 { color: var(--primary-blue); font-size: 18px; margin-bottom: 15px; }
+
+    p { line-height: 1.8; color: var(--text-dim); }
+
+    .rule-list { list-style: none; padding: 0; }
+    .rule-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #1e1e20;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .rule-list li::before { content: "•"; color: var(--primary-yellow); font-weight: bold; }
+
+    /* MENSAGENS PADRÃO AREA */
+    .copy-box {
+      background: #000;
+      padding: 20px;
+      border-radius: 12px;
+      font-family: 'Consolas', monospace;
+      color: var(--primary-blue);
+      margin: 15px 0;
+      border: 1px solid #222;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .copy-box:hover { border-color: var(--primary-yellow); background: #050505; }
+
+    /* MOBILE ADJUSTS */
+    @media (max-width: 1024px) {
+      body { flex-direction: column; }
+      nav {
+        width: 100%; height: auto; position: sticky; top: 0;
+        padding: 20px; border-right: none; border-bottom: 1px solid var(--primary-yellow);
+      }
+      nav .logo-area { margin-bottom: 15px; }
+      .nav-links { display: flex; overflow-x: auto; gap: 10px; padding-bottom: 5px; }
+      nav a { white-space: nowrap; padding: 10px 15px; }
+      main { margin-left: 0; padding: 30px 20px; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-area">
+    <h1>SÃO BERNARDO</h1>
+    <span>Staff Dashboard</span>
+  </div>
+  <div class="nav-links">
+    <a href="#p1">Visão Geral</a>
+    <a href="#p2">Código de Ética</a>
+    <a href="#p3">Protocolo de Ticket</a>
+    <a href="#p4">Comunicação</a>
+    <a href="#p5">Graduação de Penas</a>
+  </div>
+</nav>
+
+<main>
+  <div class="content-wrapper">
+    
+    <section id="p1">
+      <span class="badge">Institucional</span>
+      <h2>Introdução e Valores</h2>
+      <div class="card important">
+        <p>Este documento serve como a **Constituição Interna** da equipe do São Bernardo Roleplay. O descumprimento destas normas resulta em desvinculação imediata do cargo. Nosso pilar é a construção de um ambiente onde o jogador sinta que o sistema é justo e funcional.</p>
+        <ul class="rule-list">
+          <li><strong>Imparcialidade:</strong> Julgue o ato, não a pessoa. Não importa se é um VIP ou um amigo de longa data.</li>
+          <li><strong>Postura de Comando:</strong> Você representa a equipe. Mantenha a calma mesmo sob provocação.</li>
+          <li><strong>Qualidade Técnica:</strong> Conheça as mecânicas do Roblox e as regras de RP (VDM, RDM, Meta, Power) profundamente.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="p2">
+      <span class="badge">Operacional</span>
+      <h2>Código de Ética Staff</h2>
+      <div class="card">
+        <h3>1. Utilização de Poderes</h3>
+        <p>O uso de comandos administrativos (Fly, God, Invisibilidade) é restrito a situações de suporte técnico ou monitoramento de denúncias ativas. O uso para benefício próprio no Roleplay é considerado **Abuso de Poder**.</p>
+        
+        <h3>2. Sigilo Profissional</h3>
+        <p>Informações discutidas nos canais restritos da Staff (votações, logs, atualizações futuras) nunca devem ser vazadas para jogadores. O sigilo garante a autoridade da equipe.</p>
+      </div>
+    </section>
+
+    <section id="p3">
+      <span class="badge">Atendimento</span>
+      <h2>Protocolo de Tickets</h2>
+      <div class="card">
+        <p>Para uma resolução eficaz, siga a tríade de investigação:</p>
+        <ul class="rule-list">
+          <li><strong>Verificação:</strong> Verifique se o denunciante possui o nick do Roblox e provas contundentes (clips de no mínimo 30 segundos).</li>
+          <li><strong>Igualdade:</strong> Se necessário, chame o denunciado para apresentar sua versão. Evite discussões acaloradas no chat.</li>
+          <li><strong>Resposta Final:</strong> Aplique a punição baseada no Guia de Punições e registre o caso no canal de registros apropriado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="p4">
+      <span class="badge">Padronização</span>
+      <h2>Modelos de Comunicação</h2>
+      <div class="card">
+        <p>Utilize os modelos abaixo para manter a identidade visual do servidor:</p>
+        
+        <p><strong>Abertura de Protocolo:</strong></p>
+        <div class="copy-box">
+          "Saudações, sou o [NOME] da equipe de suporte. Seu ticket foi assumido. Para prosseguirmos, por favor, envie o nick dos envolvidos e o relato do ocorrido."
+        </div>
+
+        <p><strong>Solicitação de Evidências:</strong></p>
+        <div class="copy-box">
+          "Para que sua denúncia seja válida, precisamos de evidências em vídeo que mostrem o contexto da situação (mínimo de 30 segundos). Você possui esse clip?"
+        </div>
+
+        <p><strong>Conclusão e Encerramento:</strong></p>
+        <div class="copy-box">
+          "Agradecemos por contribuir com a organização do São Bernardo RP. Sua solicitação foi concluída. Bom jogo!"
+        </div>
+      </div>
+    </section>
+
+    <section id="p5">
+      <span class="badge">Jurisprudência</span>
+      <h2>Graduação de Penas</h2>
+      <div class="card important">
+        <ul class="rule-list">
+          <li><strong>Advertência Nível 1:</strong> Quebras de RP leves (Ex: Powergaming acidental). Suspençaõ 1d.</li>
+          <li><strong>Suspensão (24h - 7d):</strong> Dependendo da regra quebrada.</li>
+          <li><strong>Banimento Permanente:</strong> Uso de Softwares de Terceiros (Cheats), Discriminação ou tentativa de derrubar o servidor.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 SÃO BERNARDO ROLEPLAY | DESENVOLVIDO POR VHXPRIME
+    </footer>
+  </div>
+</main>
+
+</body>
+</html>
