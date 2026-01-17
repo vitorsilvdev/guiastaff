@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guia STAFF | São Bernardo RP</title>
+  <title>Diretrizes Internas | São Bernardo RP</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -14,7 +14,6 @@
       --text-main: #e2e2e2;
       --text-dim: #94a3b8;
       --accent-glow: rgba(0, 229, 255, 0.2);
-      --danger: #ff4444;
     }
 
     * { box-sizing: border-box; scroll-behavior: smooth; }
@@ -132,6 +131,7 @@
       padding: 30px;
       margin-top: 25px;
       position: relative;
+      overflow: hidden;
     }
 
     .card.important { border-left: 5px solid var(--primary-yellow); }
@@ -145,14 +145,13 @@
       padding: 12px 0;
       border-bottom: 1px solid #1e1e20;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       gap: 15px;
+      align-items: flex-start;
     }
 
-    .rule-list li strong { color: var(--primary-yellow); font-weight: 600; }
-    .punishment-time { color: var(--primary-blue); font-family: 'Consolas', monospace; font-size: 14px; }
+    .rule-list li::before { content: "•"; color: var(--primary-yellow); font-weight: bold; }
 
+    /* MENSAGENS PADRÃO AREA */
     .copy-box {
       background: #000;
       padding: 20px;
@@ -162,7 +161,11 @@
       margin: 15px 0;
       border: 1px solid #222;
       font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
     }
+
+    .copy-box:hover { border-color: var(--primary-yellow); background: #050505; }
 
     /* MOBILE ADJUSTS */
     @media (max-width: 1024px) {
@@ -206,7 +209,12 @@
       <span class="badge">Institucional</span>
       <h2>Introdução e Valores</h2>
       <div class="card important">
-        <p>Este documento serve como a <strong>Constituição Interna</strong> da equipe do São Bernardo Roleplay. O descumprimento destas normas resulta em desvinculação imediata do cargo.</p>
+        <p>Este documento serve como a **Constituição Interna** da equipe do São Bernardo Roleplay. O descumprimento destas normas resulta em desvinculação imediata do cargo. Nosso pilar é a construção de um ambiente onde o jogador sinta que o sistema é justo e funcional.</p>
+        <ul class="rule-list">
+          <li><strong>Imparcialidade:</strong> Julgue o ato, não a pessoa. Não importa se é um VIP ou um amigo de longa data.</li>
+          <li><strong>Postura de Comando:</strong> Você representa a equipe. Mantenha a calma mesmo sob provocação.</li>
+          <li><strong>Qualidade Técnica:</strong> Conheça as mecânicas do Roblox e as regras de RP (VDM, RDM, Meta, Power) profundamente.</li>
+        </ul>
       </div>
     </section>
 
@@ -215,7 +223,10 @@
       <h2>Código de Ética Staff</h2>
       <div class="card">
         <h3>1. Utilização de Poderes</h3>
-        <p>O uso de comandos administrativos (Fly, God, Invisibilidade) é restrito a situações de suporte técnico ou monitoramento de denúncias ativas.</p>
+        <p>O uso de comandos administrativos (Fly, God, Invisibilidade) é restrito a situações de suporte técnico ou monitoramento de denúncias ativas. O uso para benefício próprio no Roleplay é considerado **Abuso de Poder**.</p>
+        
+        <h3>2. Sigilo Profissional</h3>
+        <p>Informações discutidas nos canais restritos da Staff (votações, logs, atualizações futuras) nunca devem ser vazadas para jogadores. O sigilo garante a autoridade da equipe.</p>
       </div>
     </section>
 
@@ -223,7 +234,12 @@
       <span class="badge">Atendimento</span>
       <h2>Protocolo de Tickets</h2>
       <div class="card">
-        <p>Siga a tríade de investigação para garantir um veredito justo e embasado.</p>
+        <p>Para uma resolução eficaz, siga a tríade de investigação:</p>
+        <ul class="rule-list">
+          <li><strong>Verificação:</strong> Verifique se o denunciante possui o nick do Roblox e provas contundentes (clips de no mínimo 30 segundos).</li>
+          <li><strong>Igualdade:</strong> Se necessário, chame o denunciado para apresentar sua versão. Evite discussões acaloradas no chat.</li>
+          <li><strong>Resposta Final:</strong> Aplique a punição baseada no Guia de Punições e registre o caso no canal de registros apropriado.</li>
+        </ul>
       </div>
     </section>
 
@@ -231,9 +247,21 @@
       <span class="badge">Padronização</span>
       <h2>Modelos de Comunicação</h2>
       <div class="card">
+        <p>Utilize os modelos abaixo para manter a identidade visual do servidor:</p>
+        
         <p><strong>Abertura de Protocolo:</strong></p>
         <div class="copy-box">
-          "Saudações, sou o Integrante [NOME] da equipe de suporte. Seu ticket foi assumido."
+          "Saudações, sou o [NOME] da equipe de suporte. Seu ticket foi assumido. Para prosseguirmos, por favor, envie o nick dos envolvidos e o relato do ocorrido."
+        </div>
+
+        <p><strong>Solicitação de Evidências:</strong></p>
+        <div class="copy-box">
+          "Para que sua denúncia seja válida, precisamos de evidências em vídeo que mostrem o contexto da situação (mínimo de 30 segundos). Você possui esse clip?"
+        </div>
+
+        <p><strong>Conclusão e Encerramento:</strong></p>
+        <div class="copy-box">
+          "Agradecemos por contribuir com a organização do São Bernardo RP. Sua solicitação foi concluída. Bom jogo!"
         </div>
       </div>
     </section>
@@ -243,18 +271,17 @@
       <h2>Tabela de Punições</h2>
       <div class="card important">
         <p><em>Aqui abaixo, vão alguns tempos de ban para determinadas regras:</em></p>
-        
         <ul class="rule-list">
-          <li><strong>RDM</strong> <span class="punishment-time">Banimento Permanente</span></li>
-          <li><strong>CL</strong> <span class="punishment-time">7 Dias + 1 warn</span></li>
-          <li><strong>VDM</strong> <span class="punishment-time">3 dias + 1 warn</span></li>
-          <li><strong>Dark RP</strong> <span class="punishment-time">Blacklist</span></li>
-          <li><strong>PG</strong> <span class="punishment-time">5 dias + 1 warn</span></li>
-          <li><strong>MG</strong> <span class="punishment-time">8 dias + 1 warn</span></li>
-          <li><strong>RDM em Massa</strong> <span class="punishment-time">Banimento Permanente</span></li>
-          <li><strong>Anti Amor a Vida</strong> <span class="punishment-time">7 dias + 1 warn</span></li>
-          <li><strong>Spawn Kill</strong> <span class="punishment-time">4 Dias + 1 warn</span></li>
-          <li><strong>Exploit / Xit</strong> <span class="punishment-time" style="color: var(--danger);">Blacklist Permanente</span></li>
+          <li><strong>RDM</strong> = Banimento Permanente.</li>
+          <li><strong>CL</strong> = 7 Dias + 1 warn.</li>
+          <li><strong>VDM</strong> = 3 dias + 1 warn.</li>
+          <li><strong>Dark RP</strong> = Blacklist.</li>
+          <li><strong>PG</strong> = 5 dias + 1 warn.</li>
+          <li><strong>MG</strong> = 8 dias + 1 warn.</li>
+          <li><strong>Rdm em massa</strong> = Banimento Permanente.</li>
+          <li><strong>Anti amor a vida</strong> = 7 dias + 1 warn.</li>
+          <li><strong>Spawn Kill</strong> = 4 Dias + 1 warn.</li>
+          <li><strong>Exploit/Xit</strong> = Blacklist Permanente.</li>
         </ul>
       </div>
     </section>
